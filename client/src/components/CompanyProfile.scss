@@ -1,0 +1,129 @@
+.company-profile {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .company-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .detail {
+      flex: 1 1 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      p {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #666;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 15px;
+
+        li {
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      .edit-field {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+
+    .detail.logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .logo-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .edit-actions {
+    text-align: center;
+    margin-top: 20px;
+
+    .edit-button,
+    .save-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #38B6FF;
+        color: #fff;
+      }
+    }
+
+    .edit-button {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .save-button {
+      background-color: #38B6FF;
+      color: #fff;
+    }
+
+  }
+
+  .delete-button {
+    display: inline-block;
+    background-color: #ff3366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken(#ff3366, 10%);
+    }
+  }
+  
+}

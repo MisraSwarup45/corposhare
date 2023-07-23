@@ -1,0 +1,33 @@
+.terms-of-use-section {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.terms-of-use-heading {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.terms-of-use-description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .terms-of-use-heading {
+        font-size: 28px;
+    }
+
+    .terms-of-use-description {
+        font-size: 16px;
+    }
+}

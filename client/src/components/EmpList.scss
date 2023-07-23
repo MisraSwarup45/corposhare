@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary-color: #38B6FF;
+$secondary-color: #6c757d;
+
+.emp-list-container {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 30px;
+}
+
+.emp-list {
+  font-weight: 700;
+  font-size: 24px;
+  color: $primary-color;
+  text-align: center;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.employee-table th {
+  font-size: 14px;
+  font-weight: 700;
+  color: $primary-color;
+  background-color: #f8f9fa;
+}
+
+.employee-table td {
+  font-size: 14px;
+  color: $secondary-color;
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-table a {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.employee-table a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .employee-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .employee-table thead,
+  .employee-table tbody,
+  .employee-table tr,
+  .employee-table th,
+  .employee-table td {
+    display: block;
+  }
+
+  .employee-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .employee-table tr {
+    margin-bottom: 15px;
+  }
+
+  .employee-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .employee-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .employee-table td:nth-of-type(1):before {
+    content: 'Name';
+  }
+
+  .employee-table td:nth-of-type(2):before {
+    content: 'Email';
+  }
+
+  .employee-table td:nth-of-type(3):before {
+    content: 'Age';
+  }
+
+  .employee-table td:nth-of-type(4):before {
+    content: 'Skills';
+  }
+
+  .employee-table td:nth-of-type(5):before {
+    content: 'Department';
+  }
+
+  .employee-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
