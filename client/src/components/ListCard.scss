@@ -1,0 +1,118 @@
+.list-card {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    @media (min-width: 768px) {
+      width: calc(50% - 10px); // Adjusted to account for the gap
+      margin-bottom: 40px;
+    }
+  
+    @media (min-width: 1200px) {
+      width: calc(33.33% - 10px); // Adjusted to account for the gap
+      margin-bottom: 40px;
+    }
+    &__image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px 4px 0 0;
+        height: 180px;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        padding: 20px;
+    }
+
+    &__name {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    &__position {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    &__company {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    &__contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-color: #ccc;
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    &__button {
+        display: block;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #38B6FF;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__photo {
+            height: 150px;
+        }
+    }
+}
+
+
+.list-card__pay,
+.list-card__duration,
+.list-card__employee-required,
+.list-card__skills {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.links-project{
+    text-decoration: none;
+}

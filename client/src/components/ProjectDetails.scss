@@ -1,0 +1,167 @@
+.project-details {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.project-details__content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+.project-details__section {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-details__section {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-details__section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-details__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-details__company {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.project-details__pay,
+.project-details__duration,
+.project-details__employee-required,
+.project-details__skills,
+.project-details__description,
+.project-details__email,
+.project-details__contact-number,
+.project-details__created-at,
+.project-details__updated-at {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.project-details__contact {
+  margin-top: 10px;
+}
+
+.project-details__terms {
+  margin-top: 20px;
+
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  }
+}
+
+.project-details__apply-button {
+  font-size: 16px;
+  margin-top: 2%;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.active {
+    background-color: #38B6FF;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+
+.project-details__delete-button,
+.project-details__update-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+    margin-right: 5px;
+  }
+}
+
+.project-details__delete-button {
+  top: 20px;
+}
+
+.project-details__delete-button:hover{
+  color: red
+}
+.project-details__update-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-details__update-button {
+  top: 60px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+
+  svg {
+    fill: #fff;
+    margin-right: 5px;
+  }
+}
+
+.project-details__update-button:hover {
+  background-color: #0069d9;
+}
+
+.project-details__delete-message {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 10px;
+}
