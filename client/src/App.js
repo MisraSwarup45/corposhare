@@ -30,6 +30,9 @@ import EditProjectDetails from './components/EditProjectDetails';
 import EditCompanyProfile from './components/EditCompanyProfile';
 import EmpProfile from './components/EmpProfile';
 import EditEmpProfile from './components/EditEmpProfile';
+import ListPatners from './components/ListPatners';
+import DeveloperProfile from './components/DeveloperProfile';
+import ProjectAdmin from './components/ProjectAdmin';
 
 
 function App() {
@@ -59,6 +62,9 @@ function App() {
           <Route exact path='/emp-list' element={<EmpList />}></Route>
           <Route exact path='/emp-profile/:id' element={<EmpProfile />}></Route>
           <Route exact path='/emp-profile/edit/:id' element={<EditEmpProfile />}></Route>
+          <Route exact path='/list-patners' element={<ListPatners />}></Route>
+          <Route exact path='/developer-profile' element={<DeveloperProfile />}></Route>
+          <Route exact path='/project-admin' element={<ProjectAdmin />}></Route>
           <Route exact path='/company_get' element={<CompanyGet />}></Route>
           <Route exact path='/company_post' element={<CompanyPost />}></Route>
           <Route exact path='/company_single' element={<GetSingleCompany />}></Route>
