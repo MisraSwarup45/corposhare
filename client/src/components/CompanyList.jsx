@@ -2,71 +2,65 @@ import React, { useState, useEffect } from 'react';
 import './CompanyList.scss';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import ip from './ip';
 
 const CompanyList = () => {
-    // Commented out the API call and provided sample data as text
-    // const [loading, setLoading] = useState(true);
+    // Sample data
+    const sampleData = [
+        {
+            id: 1,
+            logo: 'https://loremflickr.com/320/320/company',
+            name: 'Sample Company 1',
+            email: 'sample1@example.com',
+            location: 'Sample Location 1',
+            founder: 'Sample Founder 1',
+            employees: '100',
+            year: '2005',
+            valuation: '$1 billion',
+            services: ['Service 1', 'Service 2', 'Service 3'],
+            description: 'Sample description for Company 1',
+        },
+        {
+            id: 2,
+            logo: 'https://loremflickr.com/320/320/company',
+            name: 'Sample Company 2',
+            email: 'sample2@example.com',
+            location: 'Sample Location 2',
+            founder: 'Sample Founder 2',
+            employees: '200',
+            year: '2010',
+            valuation: '$500 million',
+            services: ['Service 4', 'Service 5'],
+            description: 'Sample description for Company 2',
+        },
+    ];
+
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(`http://${ip}/api/v1/companies/`);
-                const fetchedData = await response.json();
+        // Commented out the API call and used the sample data instead
+        // const fetchData = async () => {
+        //     try {
+        //         const response = await fetch(`http://${ip}/api/v1/companies/`);
+        //         const fetchedData = await response.json();
+        //         setData(fetchedData);
+        //     } catch (error) {
+        //         console.error('An error occurred while fetching the data.', error);
+        //     }
+        // };
+        // fetchData();
 
-                setData(fetchedData);
-                // setLoading(false);
-            } catch (error) {
-                console.error('An error occurred while fetching the data.', error);
-                // setLoading(false);
-            }
-        };
-
-        fetchData();
+        // Using the sample data instead of fetching from the API
+        setData(sampleData);
     }, []);
-
-    // console.log(data);
-
-    // Sample data as text
-    // const sampleData = [
-    //     {
-    //         id: 1,
-    //         logo: 'https://loremflickr.com/320/320/company',
-    //         name: 'Sample Company 1',
-    //         email: 'sample1@example.com',
-    //         location: 'Sample Location 1',
-    //         founder: 'Sample Founder 1',
-    //         employees: '100',
-    //         year: '2005',
-    //         valuation: '$1 billion',
-    //         services: ['Service 1', 'Service 2', 'Service 3'],
-    //         desc: 'Sample description for Company 1',
-    //     },
-    //     {
-    //         id: 2,
-    //         logo: 'https://loremflickr.com/320/320/company',
-    //         name: 'Sample Company 2',
-    //         email: 'sample2@example.com',
-    //         location: 'Sample Location 2',
-    //         founder: 'Sample Founder 2',
-    //         employees: '200',
-    //         year: '2010',
-    //         valuation: '$500 million',
-    //         services: ['Service 4', 'Service 5'],
-    //         desc: 'Sample description for Company 2',
-    //     },
-    // ];
 
     return (
         <>
             <Navbar />
-            <br></br>
+            <br />
             <div className="company-list">
                 <div className="company-list__container">
                     {data.map((company) => (
                         <div className="company-card" key={company.id}>
-
                             <div className="company-card__details">
                                 <div className='logo-name'>
                                     <div className="company-card__logo">

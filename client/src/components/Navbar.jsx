@@ -1,28 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.scss';
 import logo from '../img/logo.png';
 import { Link } from 'react-router-dom';
-import { AiOutlineHome, AiFillHome } from 'react-icons/ai';
-import { BiSolidHome } from 'react-icons/bi';
 import { HiHome } from 'react-icons/hi';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
         <div className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
-          <Link to="/" style={{height: "1.2em"}}><HiHome /></Link>
+          <Link to="/" style={{ height: "1.2em" }}><HiHome /></Link>
           <Link to="/">Why Us?</Link>
           <Link to="/">Features</Link>
           <Link to="/">About</Link>
@@ -34,7 +47,7 @@ const Navbar = () => {
           <div className="bar"></div>
         </div>
       </div>
-      <div className={`white ${mobileMenuOpen ? 'active' : ''}`}></div>
+      <div className={`white ${scrolled ? 'active' : ''} ${mobileMenuOpen ? 'active' : ''}`}></div>
     </>
   );
 };
