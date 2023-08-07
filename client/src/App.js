@@ -33,7 +33,11 @@ import EditEmpProfile from './components/EditEmpProfile';
 import ListPatners from './components/ListPatners';
 import DeveloperProfile from './components/DeveloperProfile';
 import ProjectAdmin from './components/ProjectAdmin';
-
+import AppliedDevs from './components/AppliedDevs';
+import ProjectDashboard from './components/ProjectDashboard';
+import DeveloperLogin from './components/DeveloperLogin';
+import AdminLogin from './components/AdminLogin';
+import ChooseOptions from './components/ChooseOptions';
 
 function App() {
   return (
@@ -65,6 +69,11 @@ function App() {
           <Route exact path='/list-patners' element={<ListPatners />}></Route>
           <Route exact path='/developer-profile' element={<DeveloperProfile />}></Route>
           <Route exact path='/project-admin' element={<ProjectAdmin />}></Route>
+          <Route exact path='/applied-devs' element={<AppliedDevs />}></Route>
+          <Route exact path='/project-dashboard' element={<ProjectDashboard />}></Route>
+          <Route exact path='/developer-login' element={<DeveloperLogin />}></Route>
+          <Route exact path='/choose-options' element={<ChooseOptions />}></Route>
+          <Route exact path='/admin-login' element={<AdminLogin />}></Route>
           <Route exact path='/company_get' element={<CompanyGet />}></Route>
           <Route exact path='/company_post' element={<CompanyPost />}></Route>
           <Route exact path='/company_single' element={<GetSingleCompany />}></Route>

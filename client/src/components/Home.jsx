@@ -29,11 +29,11 @@ const Home = () => {
                 <div className='inner-boxi'>
                     <div class="tagi6">COLLOBORATE</div>
                     <div class="tagi7">CREATE</div>
-                    <div class="tagi8">& achieve together</div>
+                    {/* <div class="tagi8">& achieve together</div> */}
                     <div class="doodle-boxi"></div>
-                    <div class="button-container">
-                        <button class="button log-in">Log In</button>
-                        <button class="button sign-up">Sign Up</button>
+                    <div class="button-containeri">
+                        <button class="button-log-in">Log In</button>
+                        <button class="button-sign-up">Sign Up</button>
                     </div>
                 </div>
         </div>
