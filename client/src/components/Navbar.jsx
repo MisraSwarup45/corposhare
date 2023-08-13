@@ -38,8 +38,8 @@ const Navbar = () => {
           <Link to="/" style={{ height: "1.2em" }}><HiHome /></Link>
           <Link to="/">Why Us?</Link>
           <Link to="/">Features</Link>
-          <Link to="/">About</Link>
-          <Link to="/">Contact</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
         </div>
         <div className={`hamburger ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
           <div className="bar"></div>

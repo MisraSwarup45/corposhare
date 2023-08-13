@@ -72,8 +72,8 @@
 
 .tagi6 {
     display: flex;
-    width: 525px;
-    height: 470px;
+    width: 494px;
+    height: 498px;
     transform: rotate(-90deg);
     flex-direction: column;
     color: rgba(0, 69, 138, 0.05);
@@ -86,8 +86,8 @@
 
 .tagi7 {
     display: flex;
-    width: 53px;
-    margin-left: 65px;
+    width: 0px;
+    margin-left: 50px;
     height: 0px;
     transform: rotate(-90deg);
     flex-direction: column;
@@ -100,49 +100,37 @@
     letter-spacing: 1.2px;
 }
 
-// .tagi8 {
-//     transform: rotate(-180deg);
-//     color: #8D8D8D69;
-//     font-size: 39px;
-//     font-style: normal;
-//     font-weight: 700;
-//     line-height: normal;
-//     letter-spacing: 0.72px;
-//     display: flex;
-//     writing-mode: vertical-rl;
-// }
+.tagi8 {
+    transform: rotate(-90deg);
+    color: #8D8D8D69;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: -370px;
+    margin-top: -505px;
+}
 
 .doodle-boxi {
+    position: relative;
+    /* Change to relative positioning */
     width: 410px;
     height: 240px;
     flex-shrink: 0;
     background-color: #00458A;
     border-radius: 11px;
-    margin-top: -280px;
-    margin-left: 180px;
-    background-image: url('../img/doodle.png');
-    background-size: cover;
-    /* Adjust background position to move the image outside the container */
-    background-position: center -100px;
-    /* Use a value that works for your layout */
-
+    margin-top: 170px;
+    margin-left: 150px;
 }
 
-
-.doodle-boxi::before {
-    content: "";
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 350px;
-    /* Adjust the height of the doodle */
-    background-image: url('../img/doodle.png');
-    /* Replace 'doodle.png' with the path to your doodle image */
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    /* Adjust the opacity as needed */
+.doodleimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 280px;
+    /* width: 294px; */
+    margin-left: 24px;
+    margin-top: -124px;
     z-index: 1;
-    /* Place the doodle behind the boxi */
 }
 
 
@@ -150,9 +138,48 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 15px;
-    margin-left: 165px;
+    margin-left: 130px;
     width: 45%;
+    position: relative;
+    z-index: 2;
 }
+
+.button-log-in {
+    background:
+        linear-gradient(-800deg, #fff 50%, #fff 0) var(--_d, 100%)/250% no-repeat,
+        linear-gradient(-800deg, #00458A 50%, #0f1923 0) var(--_d, 100%)/250% no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+    color: white;
+    box-shadow: 4px 4px 9px -2px rgba(0, 0, 0, 0.11);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0px 10px 0px 10px;
+
+    &:hover {
+        --_d: 0;
+    }
+}
+
+.button-sign-up {
+    background: linear-gradient(139deg, #b2bdc8 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 4px 4px 9px -2px rgba(0, 0, 0, 0.11);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 0px 10px 0px 10px;
+
+
+    &:hover {
+        --_d: 0;
+    }
+}
+
 
 
 
@@ -175,8 +202,6 @@
     background: rgba(0, 69, 138, 0.35);
     margin-top: -31%;
     margin-left: 10%;
-
-
 }
 
 .circle3 {
