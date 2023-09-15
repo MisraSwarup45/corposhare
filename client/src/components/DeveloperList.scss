@@ -1,0 +1,92 @@
+// Responsive Breakpoints
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+
+// Colors
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$text-color: #333;
+$bg-color: #f5f5f5;
+
+// Fonts
+$font-family: 'Arial', sans-serif;
+
+.developer-list-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  .developer-list-col {
+    flex: calc(33.33% - 20px); // 3 cards in a row with 20px spacing
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+
+    @media screen and (max-width: $small-screen) {
+      flex: calc(50% - 20px); // 2 cards in a row on small screens
+    }
+
+    @media screen and (max-width: $medium-screen) {
+      flex: 100%; // 1 card in a row on extra-small screens
+    }
+
+    .developer-card {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .developer-card-body {
+        padding: 20px;
+        text-align: center;
+
+        .developer-card-img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+
+        .developer-card-title {
+          color: $primary-color;
+          font-size: 20px;
+          margin-top: 10px;
+        }
+
+        .developer-card-subtitle {
+          color: $text-color;
+          font-size: 16px;
+          margin-top: 5px;
+        }
+
+        .developer-card-text {
+          color: $text-color;
+          margin-top: 15px;
+        }
+
+        .developer-badge {
+          display: inline-block;
+          background-color: $primary-color;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 4px;
+          margin-right: 5px;
+          margin-top: 10px;
+        }
+
+        .developer-card-link {
+          display: block;
+          color: $primary-color;
+          margin-top: 15px;
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

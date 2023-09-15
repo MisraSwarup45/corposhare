@@ -1,36 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './DeveloperProfile.scss';
 import Navbar from './Navbar';
 
 const DeveloperProfile = () => {
-  // Sample data for the developer profile
-  const developer = {
-    name: 'John Doe',
-    role: 'Developer',
-    stack: 'React, Node.js',
-    bio: 'I am a passionate developer with expertise in React and Node.js.',
-    photo: 'https://via.placeholder.com/200', // Replace with the actual photo URL
-    education: 'Bachelor of Computer Science, XYZ University',
-    experience: [
-      {
-        title: 'Frontend Developer',
-        company: 'ABC Tech Solutions',
-        duration: 'Jan 2018 - Dec 2020',
-      },
-      {
-        title: 'Full-stack Developer',
-        company: 'Tech Co.',
-        duration: 'Jan 2021 - Present',
-      },
-    ],
-  };
+  const [developer, setDeveloper] = useState({});
+
+  useEffect(() => {
+    // Fetch project admin data from the server
+    fetch("http://146.190.121.119:8000/contributor/1")
+      .then((res) => res.json())
+      .then((data) => setDeveloper(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div>
       <Navbar />
       <div className="developer-profile-container">
         <div className="developer-photo">
-          <img src={developer.photo} alt={developer.name} />
+          <img src={developer.profile_pic} alt={developer.name} />
         </div>
         <div className="developer-details">
           <h2>{developer.name}</h2>
@@ -43,7 +31,7 @@ const DeveloperProfile = () => {
             <p>{developer.education}</p>
           </div>
 
-          <div className="experience-section">
+          {/* <div className="experience-section">
             <h3>Experience</h3>
             {developer.experience.map((exp, index) => (
               <div key={index}>
@@ -52,7 +40,7 @@ const DeveloperProfile = () => {
                 <p>{exp.duration}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

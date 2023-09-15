@@ -3,10 +3,6 @@ import { useParams } from 'react-router';
 import DatePicker from 'react-date-picker';
 import ip from './ip';
 
-// import dotenv from 'dotenv';
-
-// dotenv.config();
-
 const EditEmpProfile = () => {
     const { id } = useParams();
     console.log(ip);

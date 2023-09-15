@@ -1,0 +1,52 @@
+/* ProjectAdminList.scss */
+.project-admin-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f8f8f8;
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        .round-button {
+            border: none;
+            border-radius: 50%;
+            // width: 24px;
+            // height: 24px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .true {
+            background-color: green;
+        }
+
+        .false {
+            background-color: red;
+        }
+    }
+}

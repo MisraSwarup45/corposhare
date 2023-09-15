@@ -1,0 +1,171 @@
+// Responsive Breakpoints
+$small-screen: 480px;
+$medium-screen: 768px;
+$large-screen: 992px;
+
+// Colors
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$text-color: #333;
+$bg-color: #f5f5f5;
+
+// Fonts
+$font-family: 'Arial', sans-serif;
+
+.new-developer-input {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .input,
+    .textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: $font-family;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  .stack-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .input {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .remove-button {
+      background-color: $secondary-color;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+  .add-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .sub-heading {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .experience-item,
+  .education-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .label {
+      font-weight: bold;
+    }
+
+    .input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 5px;
+
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+
+    .remove-button {
+      background-color: $secondary-color;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 5px;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+
+  .submit-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Responsive Styles
+@media screen and (max-width: $small-screen) {
+  .new-developer-input {
+    padding: 10px;
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .experience-item,
+    .education-item {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .new-developer-input {
+    padding: 10px;
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+}

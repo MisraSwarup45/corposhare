@@ -3,15 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from './components/LoginPage.jsx';
 import Register from './components/register';
-import Company from "./components/company.jsx"
 import Companyform from './components/CompnayFrom.jsx';
-import CompanyGet from './components/CompanyGet.jsx';
-import CompanyPost from './components/CompanyPost.jsx';
-import GetSingleCompany from './components/GetSingleCompany'
-import GetCompanyProject from './components/GetCompanyProject.jsx'
-import AddCompanyProject from './components/AddCompanyProject.jsx'
 import DashBoard from "./components/DashBoard.jsx"
-import AddEmp from "./components/AddEmp.jsx"
 import LandingPage from './components/LandingPage';
 import ListProjects from './components/ListProjects';
 import AddProject from './components/AddProject';
@@ -38,6 +31,10 @@ import ProjectDashboard from './components/ProjectDashboard';
 import DeveloperLogin from './components/DeveloperLogin';
 import AdminLogin from './components/AdminLogin';
 import ChooseOptions from './components/ChooseOptions';
+import DeveloperInput from './components/DeveloperInput';
+import ProjectAdminList from './components/ProjectAdminList';
+import AdminInput from './components/AdminInput';
+import DeveloperList from './components/DeveloperList';
 
 function App() {
   return (
@@ -73,14 +70,11 @@ function App() {
           <Route exact path='/project-dashboard' element={<ProjectDashboard />}></Route>
           <Route exact path='/developer-login' element={<DeveloperLogin />}></Route>
           <Route exact path='/choose-options' element={<ChooseOptions />}></Route>
+          <Route exact path='/developer-input' element={<DeveloperInput />}></Route>
+          <Route exact path='/developer-list' element={<DeveloperList />}></Route>
+          <Route exact path='/projectadmins' element={<ProjectAdminList />}></Route>
+          <Route exact path='/admin-input' element={<AdminInput />}></Route>
           <Route exact path='/admin-login' element={<AdminLogin />}></Route>
-          <Route exact path='/company_get' element={<CompanyGet />}></Route>
-          <Route exact path='/company_post' element={<CompanyPost />}></Route>
-          <Route exact path='/company_single' element={<GetSingleCompany />}></Route>
-          <Route exact path='/company_project' element={<GetCompanyProject />}></Route>
-          <Route exact path='/company_projectadd' element={<AddCompanyProject />}></Route>
-          <Route exact path='/add_emp' element={<AddEmp />}></Route>
-          <Route exact path='/register' element={<Company />}> </Route>
         </Routes>
       </Router>
     </>
